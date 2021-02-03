@@ -1,7 +1,5 @@
 'use strict';
 
-const { getBySlug } = require('../models/ceoModel');
-
 const express = require('express'),
     router = express.Router(), 
     ceoModel = require('../models/ceoModel');
