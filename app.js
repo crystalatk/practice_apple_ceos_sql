@@ -13,6 +13,11 @@ app.engine('html', es6Renderer);
 app.set('views', 'templates');
 app.set('view engine', 'html');
 
+// middleware so that express can read the req body
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+// static folder read by express
 app.use(express.static('public'));
 
 const SERVER = HTTP.createServer(app);
