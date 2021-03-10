@@ -1,18 +1,10 @@
-'use strict';
+"use strict";
 
-const express = require('express'),
-    router = express.Router();
+const express = require("express"),
+  router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('template', {
-        locals: {
-            title: "Home Page",
-        },
-        partials: {
-            body: "partials/home",
-        }
-    })
+router.get("/", (req, res) => {
+  res.json("Cats are fluffy").status(200);
 });
-
 
 module.exports = router;
